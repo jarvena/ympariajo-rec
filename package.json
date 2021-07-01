@@ -1,0 +1,21 @@
+{
+    "name": "ympariajo-rec",
+    "version": "1.0.0",
+    "description": "A backend for recording HTTP location updates to mongoDB",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "dev": "nodemon index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "jarvena",
+    "dependencies": {
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "mongodb": "^3.6.9",
+        "morgan": "^1.10.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.8"
+    }
+}
