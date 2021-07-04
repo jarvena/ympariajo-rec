@@ -1,9 +1,8 @@
 const { MongoClient } = require('mongodb')
 const config = require('./utils/config')
 
-const client = new MongoClient(config.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-
 const updateLocation = async(uid, locationUpdate) => {
+    const client = new MongoClient(config.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     await client.connect()
     const routeCollection = client.db("routedata").collection("routes")
 
