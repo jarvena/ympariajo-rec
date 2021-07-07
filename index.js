@@ -8,7 +8,7 @@ const app = express()
 app.use(morgan('tiny'))
 
 app.post('/log', (req, res) => {
-    const uid = req.query.uid
+    const uid = parseInt(req.query.uid)
     const locUpdate = [req.query.lat, req.query.lon, req.query.time]
     console.log(locUpdate)
     updateLocation(uid, locUpdate)
