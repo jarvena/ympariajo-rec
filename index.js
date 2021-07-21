@@ -9,7 +9,11 @@ app.use(morgan('tiny'))
 
 app.post('/log', (req, res) => {
     const uid = parseInt(req.query.uid)
-    const locUpdate = [req.query.lat, req.query.lon, req.query.time]
+    const lat = parseFloat(req.query.lat)
+    const lon = parseFloat(req.query.lon)
+    const time = Date.parse(req.query.time)
+
+    const locUpdate = [lat, lon, time]
     console.log(locUpdate)
     updateLocation(uid, locUpdate)
     res.status(200).end()
